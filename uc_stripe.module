@@ -314,7 +314,7 @@ function uc_stripe_uc_checkout_pane() {
     'desc' => t("Accept stripe payment from customer."),
     'weight' => 6,
     'process' => FALSE,
-    'collapsible' => FALSE,
+    'collapsible' => TRUE,
   );
   return $panes;
 }
