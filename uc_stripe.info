@@ -4,6 +4,6 @@ package = Ubercart - payment
 backdrop = 1.x
 type = module
 
-dependencies[] = uc_payment
-dependencies[] = uc_credit
+dependencies[] = ubercart:uc_payment
+dependencies[] = ubercart:uc_credit
 dependencies[] = stripe  (>=2.0.0)
