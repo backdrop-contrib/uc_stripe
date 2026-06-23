@@ -45,7 +45,7 @@ function uc_stripe_requirements($phase) {
 function _uc_stripe_load_library() {
   module_load_include('module', 'uc_stripe');
   $library = stripe_load_library();
-  if ($library['included'] && class_exists('\Stripe\Stripe')) {
+  if (($library['loaded'] || $library['included']) && class_exists('\Stripe\Stripe')) {
     return \Stripe\Stripe::VERSION;
   }
   watchdog('uc_stripe', 'Stripe PHP Library not installed or wrong version');
